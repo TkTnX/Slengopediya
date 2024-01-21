@@ -1,20 +1,19 @@
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 const Word = () => {
   return (
     <main>
-      <section class="slovo">
-        <div class="slovo__container">
-          <h2 class="slovo__title">Вайб</h2>
-          <p class="slovo__desc">
+      <section className="slovo">
+        <div className="slovo__container">
+          <h2 className="slovo__title">Вайб</h2>
+          <p className="slovo__desc">
             Вайб - Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Obcaecati modi autem debitis unde, amet sed!
           </p>
-          <a href="./index.html" class="slovo__btn">
-                      Вернуться на главную
-
-                  </a>
-
+          <NavLink to="/" className="slovo__btn">
+            <p>Вернуться на главную</p>
+          </NavLink>
         </div>
       </section>
     </main>

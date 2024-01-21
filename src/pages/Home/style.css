@@ -83,7 +83,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.dictionary__item a {
+.dictionary__item p {
   font-weight: 700;
   border: 1px solid var(--textColor);
   padding: 10px;
@@ -92,11 +92,11 @@
   transition: all 0.1s ease-in;
   background-color: #fff;
 }
-.dictionary__item a:hover {
+.dictionary__item p:hover {
   background-color: var(--textColor);
   color: white;
 }
-.dictionary__item a:active {
+.dictionary__item p:active {
   background-color: #212e14;
 }
 @media (max-width: 1250px) {
