@@ -1,0 +1,41 @@
+.footer {
+  background: linear-gradient(
+    180deg,
+    #a4c08e -11.6%,
+    rgba(235, 243, 229, 0) 100%
+  );
+  padding: 50px 0 0 5px;
+
+  // .footer__container
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 500px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  // .footer__contacts
+
+  &__contacts {
+  }
+
+  // .footer__contact
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+
+  // .footer__copyright
+
+  &__copyright {
+    text-align: center;
+    color: gray;
+  }
+}

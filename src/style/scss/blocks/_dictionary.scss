@@ -1,0 +1,110 @@
+.dictionary {
+  padding: 100px 0 200px;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+
+    background-image: url("/slengopedia/img/images/1.png");
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    transform: rotate(180deg);
+    left: -200px;
+    z-index: -10;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-image: url("/slengopedia/img/images/1.png");
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    transform: rotate(90deg);
+    z-index: -10;
+    right: -200px;
+    bottom: -50px;
+  }
+
+  // .dictionary__title
+
+  &__title {
+    font-size: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
+    font-style: italic;
+    font-weight: 700;
+    @media (max-width: 350px) {
+      text-align: center;
+    }
+  }
+
+  // .dictionary__input
+
+  &__input {
+    display: block;
+    padding: 15px;
+    border: 1px solid var(--textColor) !important;
+    border-radius: 20px;
+    width: 400px;
+    margin-top: 30px;
+    margin-left: auto;
+    font-weight: 700;
+
+    @media (max-width: 440px) {
+      max-width: 300px;
+      margin-right: auto;
+    }
+    @media (max-width: 320px) {
+      max-width: 250px;
+    }
+  }
+
+  // .dictionary__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    gap: 30px;
+    margin-top: 80px;
+    @media (max-width: 1250px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @media (max-width: 625px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 370px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // .dictionary__item
+
+  &__item {
+    a {
+      font-weight: 700;
+      border: 1px solid var(--textColor);
+      padding: 10px;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.1s ease-in;
+      background-color: #fff;
+
+      &:hover {
+        background-color: var(--textColor);
+        color: white;
+      }
+      &:active {
+        background-color: #212e14;
+      }
+    }
+    @media (max-width: 1250px) {
+      justify-self: center;
+    }
+  }
+}

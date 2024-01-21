@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,700&display=swap");
+
+:root {
+  --textColor: #2e4d0f;
+  --accent: #1050da;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+#root,
+.App {
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+body {
+  color: var(--textColor);
+  font-family: "Cormorant Infant", serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+[class*="__container"] {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+.active {
+  text-decoration: underline !important;
+  text-decoration-color: var(--textColor) !important;
+}
+
+a {
+  color: var(--textColor);
+}

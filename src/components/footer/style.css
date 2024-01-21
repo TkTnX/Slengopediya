@@ -1,0 +1,31 @@
+.footer {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 22%,
+    rgba(164, 192, 142, 1) 68%,
+    rgba(164, 192, 142, 1) 98%
+  );
+  padding: 50px 0 0 5px;
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .footer__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+.footer__copyright {
+  text-align: center;
+  color: gray;
+}

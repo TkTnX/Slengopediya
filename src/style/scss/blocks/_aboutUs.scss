@@ -1,0 +1,28 @@
+.aboutUs {
+  padding: 100px 0;
+
+  // .aboutUs__title
+
+  &__title {
+    font-size: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  // .aboutUs__text
+
+  &__text {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 34px;
+    line-height: 1.5;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    @media (max-width: 720px) {
+      font-size: 20px;
+    }
+  }
+}

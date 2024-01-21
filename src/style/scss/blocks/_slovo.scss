@@ -1,0 +1,46 @@
+.slovo {
+  padding: 80px 0;
+  // .slovo__container
+
+  &__container {
+  }
+
+  // .slovo__title
+
+  &__title {
+    font-size: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  // .slovo__desc
+
+  &__desc {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__btn {
+    display: block;
+    font-size: 36px;
+    text-align: center;
+
+    border: 1px solid var(--textColor);
+    border-radius: 50px;
+
+    padding: 15px;
+    max-width: 400px;
+    margin: 50px auto 0;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+
+    &:hover {
+      background-color: var(--textColor);
+      color: white;
+    }
+    &:active {
+      background-color: #1b2510;
+      transform: translateY(5px);
+    }
+  }
+}

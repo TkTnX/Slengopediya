@@ -1,0 +1,36 @@
+.header {
+  background: linear-gradient(
+    180deg,
+    #a4c08e -11.6%,
+    rgba(235, 243, 229, 0) 100%
+  );
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+@media (max-width: 358px) {
+  .header__list {
+    gap: 15px;
+  }
+}
+.header__link {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.header__link:hover {
+  color: #628d37;
+}
+.header__link:active {
+  color: #34491e;
+}
+@media (max-width: 330px) {
+  .header__link {
+    font-size: 20px;
+  }
+}

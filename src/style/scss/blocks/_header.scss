@@ -1,0 +1,40 @@
+.header {
+  // .header__container
+  background: linear-gradient(
+    180deg,
+    #a4c08e -11.6%,
+    rgba(235, 243, 229, 0) 100%
+  );
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    @media (max-width: 358px) {
+      gap: 15px;
+    }
+  }
+
+  // .header__link
+
+  &__link {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    &:hover {
+      color: #628d37;
+    }
+    &:active {
+      color: #34491e;
+    }
+    @media (max-width: 330px) {
+      font-size: 20px;
+    }
+  }
+}
