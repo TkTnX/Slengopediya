@@ -1,27 +1,35 @@
 import { words } from "./../../helpers/wordsList";
 import "./style.css";
 import WordComponent from "../../components/word/Word";
+import { useState } from "react";
+
 const Home = () => {
+  const [searchTerm, setSearchTerm] = useState(""); // состояние для хранения поискового запроса
+
+  const filteredWords = words.filter((word) => {
+    return word.title.toLowerCase().includes(searchTerm.toLowerCase()); // фильтрация списка слов
+  });
+
   return (
     <main>
       <section className="dictionary">
         <div className="dictionary__container">
           <h2 className="dictionary__title">Словарь</h2>
           <input
-            placeholder="В разработке..."
+            placeholder="Найти слово..."
             type="text"
             className="dictionary__input"
-            onChange={(event) => console.log(event.target.value)}
+            onChange={(event) => setSearchTerm(event.target.value)}
           />
           <ul className="dictionary__list">
             <li className="dictionary__item">
-              {words.map((word, index) => {
+              {filteredWords.map((word, index) => {
                 return (
                   <WordComponent
                     className="dictionary__item"
-                    key={index}
+                    key={word.id}
                     title={word.title}
-                    index={index}
+                    index={word.id}
                   />
                 );
               })}

@@ -3,8 +3,13 @@ import { words } from "./../../helpers/wordsList";
 import "./style.css";
 
 const Word = () => {
-  const { id } = useParams();
-  const word = words[id];
+  const { index } = useParams();
+  const word = words.find((word) => word.id === index);
+
+  if (!word) {
+    return <p>Слово не найдено!</p>;
+  }
+
   return (
     <main>
       <section className="slovo">
