@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { words } from "./../../helpers/wordsList";
 import "./style.css";
-
+import WordComponent from "../../components/word/Word";
 const Home = () => {
   return (
     <main>
@@ -8,15 +8,23 @@ const Home = () => {
         <div className="dictionary__container">
           <h2 className="dictionary__title">Словарь</h2>
           <input
-            placeholder="Найти слово..."
+            placeholder="В разработке..."
             type="text"
             className="dictionary__input"
+            onChange={(event) => console.log(event.target.value)}
           />
           <ul className="dictionary__list">
             <li className="dictionary__item">
-              <NavLink className="dictionary__item" to="./word">
-                <p>Вайб</p>
-              </NavLink>
+              {words.map((word, index) => {
+                return (
+                  <WordComponent
+                    className="dictionary__item"
+                    key={index}
+                    title={word.title}
+                    index={index}
+                  />
+                );
+              })}
             </li>
           </ul>
         </div>

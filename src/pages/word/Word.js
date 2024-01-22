@@ -1,16 +1,20 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import { words } from "./../../helpers/wordsList";
 import "./style.css";
 
 const Word = () => {
+  const { id } = useParams();
+  const word = words[id];
   return (
     <main>
       <section className="slovo">
         <div className="slovo__container">
-          <h2 className="slovo__title">Вайб</h2>
+          <h2 className="slovo__title">{word.title}</h2>
+
           <p className="slovo__desc">
-            Вайб - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Obcaecati modi autem debitis unde, amet sed!
+            {word.title} - {word.desc}
           </p>
+          <p className="slovo__example">Пример: {word.example}</p>
           <NavLink to="/" className="slovo__btn">
             <p>Вернуться на главную</p>
           </NavLink>
