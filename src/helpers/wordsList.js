@@ -115,5 +115,6 @@ const words = [
     example: "Он выглядел как нефор.",
   },
 ];
+words.sort((a, b) => a.title.localeCompare(b.title));
 
-export {words}
+export { words };
