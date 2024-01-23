@@ -10,6 +10,11 @@ const Home = () => {
     return word.title.toLowerCase().includes(searchTerm.toLowerCase()); // фильтрация списка слов
   });
 
+  if (filteredWords.length === 0) {
+    console.log("Слова не найдены!");
+    <li className="dictionary__item">Слова не найдены!</li>;
+  }
+
   return (
     <main>
       <section className="dictionary">
@@ -22,18 +27,22 @@ const Home = () => {
             onChange={(event) => setSearchTerm(event.target.value)}
           />
           <ul className="dictionary__list">
-            <li className="dictionary__item">
-              {filteredWords.map((word, index) => {
-                return (
-                  <WordComponent
-                    className="dictionary__item"
-                    key={word.id}
-                    title={word.title}
-                    index={word.id}
-                  />
-                );
-              })}
-            </li>
+            {filteredWords.length === 0 ? (
+              <p className="dictionary__error">Слово не найдено!</p>
+            ) : (
+              <li className="dictionary__item">
+                {filteredWords.map((word, index) => {
+                  return (
+                    <WordComponent
+                      className="dictionary__item"
+                      key={word.id}
+                      title={word.title}
+                      index={word.id}
+                    />
+                  );
+                })}
+              </li>
+            )}
           </ul>
         </div>
       </section>

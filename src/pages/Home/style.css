@@ -119,6 +119,10 @@
   }
 }
 
-.none {
-  display: none;
+.dictionary__error {
+  font-size: 34px;
+  font-weight: 700;
+  color: black;
+  margin-top: 50px;
+
 }
