@@ -6,9 +6,7 @@ const Word = () => {
   const { index } = useParams();
   const word = words.find((word) => word.id === index);
 
-  if (!word) {
-    return <p>Слово не найдено!</p>;
-  }
+
 
   return (
     <main>

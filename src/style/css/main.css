@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 :root {
-  --textColor: #2e4d0f;
-  --accent: #1050da;
+  --textColor: #ff9800;
+  --accent: #fdc97c;
+  --onOrange: #fff;
 }
 
 html,
 body {
-  min-height: 100vh;
+  height: 100%;
 }
 
 #root,
@@ -19,13 +20,19 @@ body {
   flex-direction: column;
 }
 
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   flex-grow: 1;
 }
 
 body {
   color: var(--textColor);
-  font-family: "Cormorant Infant", serif;
+  font-family: "Montserrat";
   font-size: 24px;
   font-weight: 500;
 }
@@ -37,13 +44,19 @@ body {
   padding: 0 15px;
 }
 
-.active {
-  text-decoration: underline !important;
-  text-decoration-color: var(--textColor) !important;
+a {
+  color: inherit;
 }
 
-a {
-  color: var(--textColor);
+.title {
+  font-size: clamp(1.875rem, 1.307rem + 2.84vw, 3.438rem);
+  text-align: center;
+  font-weight: 900;
+}
+
+.currentPage {
+  border-bottom: 3px solid white !important;
+  background: #000;
 }
 
 /* Reset and base styles  */

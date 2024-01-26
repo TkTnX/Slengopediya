@@ -1,31 +1,44 @@
 .footer {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 22%,
-    rgba(164, 192, 142, 1) 68%,
-    rgba(164, 192, 142, 1) 98%
-  );
-  padding: 50px 0 0 5px;
+  background: linear-gradient(270deg, #fdcc7f 44.11%, #fcb968 95.26%);
+  color: var(--onOrange);
+  padding: 80px 15px 15px;
+
 }
 .footer__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
 }
-@media (max-width: 500px) {
+@media (max-width: 435px) {
   .footer__container {
-    flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
   }
 }
-.footer__contact {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.footer__item {
   padding-bottom: 15px;
+}
+.footer__item:first-child {
+  font-weight: bold;
+}
+.footer__contacts-item {
+  padding-bottom: 15px;
+  position: relative;
+}
+.footer__contacts-item::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("./../../img/icons/telegram.svg");
+  background-repeat: no-repeat;
+  left: -35px;
+  bottom: -10px;
 }
 .footer__copyright {
   text-align: center;
-  color: gray;
+  padding: 20px 15px 10px;
+  font-size: 16px;
 }

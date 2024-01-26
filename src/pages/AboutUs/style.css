@@ -1,24 +1,40 @@
 .aboutUs {
-  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 15px;
 }
-.aboutUs__title {
-  font-size: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
-  font-style: italic;
-  font-weight: 700;
-  text-align: center;
-  padding-bottom: 40px;
+.aboutUs::after {
+  content: "";
+  position: absolute;
+  background-image: url("./../../img/icons/star.svg");
+  background-position: center center; /* x y */
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  right: -250px;
+  top: -160px;
+  z-index: -1;
 }
-.aboutUs__text {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 34px;
-  line-height: 1.5;
-  font-weight: 600;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-@media (max-width: 720px) {
-  .aboutUs__text {
-    font-size: 20px;
+@media (max-width: 555px) {
+  .aboutUs::after {
+    top: -250px;
+    left: -220px;
   }
+}
+
+.aboutUs__title {
+  text-align: center;
+  font-size: clamp(2.5rem, 2.159rem + 1.7vw, 3.438rem);
+  padding-bottom: 35px;
+  font-weight: 900;
+}
+
+.aboutUs__text {
+  line-height: 1.5;
+  font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+}
+.aboutUs__text span {
+  font-weight: bold;
+  border-bottom: 3px solid var(--textColor);
 }
