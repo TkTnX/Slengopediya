@@ -6,8 +6,6 @@ const Word = () => {
   const { index } = useParams();
   const word = words.find((word) => word.id === index);
 
-
-
   return (
     <main>
       <section className="slovo">

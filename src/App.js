@@ -8,6 +8,8 @@ import Home from "./pages/Home/Home";
 import Word from "./pages/word/Word";
 
 import "./style/css/main.css";
+
+
 function App() {
   return (
     <div className="App">
