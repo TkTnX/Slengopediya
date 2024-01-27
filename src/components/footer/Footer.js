@@ -15,6 +15,7 @@ const Footer = () => {
           </NavLink>
         </ul>
         <ul className="footer__contacts">
+          <li className="footer__item">Контакты</li>
           <li className="footer__contacts-item">
             <a
               href="https://t.me/Timurka2077"

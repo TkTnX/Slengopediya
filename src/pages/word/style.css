@@ -15,7 +15,7 @@
   padding-bottom: 30px;
 }
 .slovo__desc {
-  font-size: clamp(1.75rem, 1.568rem + 0.91vw, 2.25rem);
+  font-size: clamp(1.25rem, 0.909rem + 1.7vw, 2.188rem);
   font-weight: 700;
   line-height: 1.5;
   text-align: left;
@@ -50,7 +50,7 @@
 }
 
 .slovo__example {
-  font-size: clamp(1.75rem, 1.568rem + 0.91vw, 2.25rem);
+  font-size: clamp(1.25rem, 0.909rem + 1.7vw, 2.188rem);
   line-height: 1.5;
   font-weight: 700;
   color: #000;
