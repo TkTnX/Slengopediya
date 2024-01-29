@@ -7,7 +7,7 @@ import "swiper/css";
 import "./style.css";
 import "swiper/css/autoplay";
 
-export default () => {
+const Slider = () => {
   return (
     <Swiper
       className="swiper-wrapper"
@@ -40,35 +40,8 @@ export default () => {
           </SwiperSlide>
         );
       })}
-
-      {/* <SwiperSlide>
-        <div className="hits__card">
-          <div className="hits__card-title">Чушпан</div>
-          <div className="hits__card-desc">
-            Чушпан - это кринж. Узнать что такое кринж, вы можете на нашем
-            сайте.
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="hits__card">
-          <div className="hits__card-title">Чушпан</div>
-          <div className="hits__card-desc">
-            Чушпан - это кринж. Узнать что такое кринж, вы можете на нашем
-            сайте.
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        {" "}
-        <div className="hits__card">
-          <div className="hits__card-title">Чушпан</div>
-          <div className="hits__card-desc">
-            Чушпан - это кринж. Узнать что такое кринж, вы можете на нашем
-            сайте.
-          </div>
-        </div>
-      </SwiperSlide> */}
     </Swiper>
   );
 };
+
+export default Slider;
