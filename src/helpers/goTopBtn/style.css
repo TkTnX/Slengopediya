@@ -1,0 +1,35 @@
+.arrow-up {
+  width: 60px;
+  position: fixed;
+  bottom: 30%;
+  right: 20px;
+  border: 1px solid #ff9800;
+  display: block;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  background-color: #fff;
+
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .arrow-up {
+    width: 50px;
+    padding: 5px;
+    bottom: 20%;
+  }
+}
+
+.arrow-up:hover {
+  background-color: #ff9800;
+}
+
+.arrow-up:active {
+  transform: scale(1.2);
+}
+
+.go-top--show {
+  opacity: 1;
+}

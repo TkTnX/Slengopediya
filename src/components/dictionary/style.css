@@ -42,7 +42,7 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1210px) {
   .dictionary__item {
     grid-template-columns: repeat(4, 1fr);
   }

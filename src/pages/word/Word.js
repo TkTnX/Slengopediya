@@ -1,5 +1,6 @@
-import { NavLink, useParams } from "react-router-dom";
 import { words } from "./../../helpers/wordsList";
+import { NavLink, useParams } from "react-router-dom";
+
 import "./style.css";
 
 const Word = () => {
