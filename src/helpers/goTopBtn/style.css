@@ -1,7 +1,7 @@
 .arrow-up {
   width: 60px;
   position: fixed;
-  bottom: 30%;
+  bottom: 10%;
   right: 20px;
   border: 1px solid #ff9800;
   display: block;
@@ -13,14 +13,12 @@
 
   opacity: 0;
   transition: all 0.2s ease-in;
-  
 }
 
 @media (max-width: 600px) {
   .arrow-up {
     width: 50px;
     padding: 5px;
-    bottom: 20%;
   }
 }
 
