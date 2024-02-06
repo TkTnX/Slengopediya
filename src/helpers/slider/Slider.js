@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { popularWords } from "./popularWords";
+
 // Import Swiper styles
 import "swiper/css";
 import "./style.css";
@@ -28,9 +29,9 @@ const Slider = () => {
       navigation
       pagination={{ clickable: true }}
     >
-      {popularWords.map((popularWords) => {
+      {popularWords.map((popularWords, id) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={id}>
             <div className="hits__card">
               <div className="hits__card-title">{popularWords.title}</div>
               <div className="hits__card-desc">

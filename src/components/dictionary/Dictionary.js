@@ -1,7 +1,10 @@
 import { words } from "./../../helpers/wordsList";
 import "./style.css";
+import { NavLink } from "react-router-dom";
 import WordComponent from "../../components/word/Word";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Dictionary = () => {
   const [searchTerm, setSearchTerm] = useState(""); // состояние для хранения поискового запроса
@@ -9,6 +12,10 @@ const Dictionary = () => {
   const filteredWords = words.filter((word) => {
     return word.title.toLowerCase().includes(searchTerm.toLowerCase()); // фильтрация списка слов
   });
+
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
 
   return (
     <main>
@@ -18,6 +25,7 @@ const Dictionary = () => {
           <input
             placeholder="Найти слово..."
             type="text"
+            data-aos="fade-right"
             className="dictionary__input"
             onChange={(event) => setSearchTerm(event.target.value)}
           />
@@ -25,17 +33,19 @@ const Dictionary = () => {
             {filteredWords.length === 0 ? (
               <p className="dictionary__error">Слово не найдено!</p>
             ) : (
-              <li className="dictionary__item">
-                {filteredWords.map((word) => {
-                  return (
-                    <WordComponent
-                      key={word.id}
-                      title={word.title}
-                      index={word.id}
-                    />
-                  );
-                })}
-              </li>
+              filteredWords.map((word, id) => {
+                return (
+                  <li className="dictionary__item">
+                    <NavLink to={`/word/${word.id}`}>
+                      <WordComponent
+                        key={id}
+                        title={word.title}
+                        index={word.id}
+                      />
+                    </NavLink>
+                  </li>
+                );
+              })
             )}
           </ul>
         </div>

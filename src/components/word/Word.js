@@ -1,13 +1,5 @@
-import { NavLink } from "react-router-dom";
-
-const WordComponent = ({ title, index }) => {
-  return (
-    <NavLink to={`/word/${index}`}>
-      <li>
-        <p>{title}</p>
-      </li>
-    </NavLink>
-  );
+const WordComponent = ({ title, desc, example }) => {
+  return <p>{title}</p>;
 };
 
 export default WordComponent;

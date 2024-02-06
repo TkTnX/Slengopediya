@@ -3,10 +3,10 @@ import "./style.css";
 const AboutUs = () => {
   return (
     <main>
-      <section class="aboutUs">
-        <div class="aboutUs__container">
-          <h2 class="aboutUs__title">О нас</h2>
-          <p class="aboutUs__text">
+      <section className="aboutUs">
+        <div className="aboutUs__container">
+          <h2 className="aboutUs__title">О нас</h2>
+          <p className="aboutUs__text">
             Всем привет! Мы ученики 8Б класса и это наш проект «
             <span>Сленгопедия</span>»!
             <br />

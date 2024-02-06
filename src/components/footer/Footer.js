@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "./style.css";
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
   return (
     <footer className="footer">
       <div className="footer__container">
