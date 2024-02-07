@@ -1,4 +1,4 @@
-const WordComponent = ({ title, desc, example }) => {
+const WordComponent = ({ title }) => {
   return <p>{title}</p>;
 };
 

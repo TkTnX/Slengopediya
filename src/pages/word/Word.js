@@ -5,32 +5,28 @@ import "./style.css";
 
 const Word = () => {
   const { index } = useParams();
-  const word = words.find((word) => word.id === index);
 
-  if (!word || !word.title) {
-    return (
-      <main>
-        <section className="slovo">
-          <div className="slovo__container">
-            <h2 className="slovo__title">Пожалуйста, вернитесь на главную</h2>
-            <NavLink to="/" className="slovo__btn">
-              <p>Вернуться на главную</p>
-            </NavLink>
-          </div>
-        </section>
-      </main>
-    );
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].id === index) {
+      localStorage.setItem("title", words[i].title);
+      localStorage.setItem("desc", words[i].desc);
+      localStorage.setItem("example", words[i].example);
+      break;
+    }
   }
+
   return (
     <main>
       <section className="slovo">
         <div className="slovo__container">
-          <h2 className="slovo__title">{word.title}</h2>
+          <h2 className="slovo__title">{localStorage.getItem("title")}</h2>
 
           <p className="slovo__desc">
-            {word.title} - {word.desc}
+            {localStorage.getItem("title")}-{localStorage.getItem("desc")}
           </p>
-          <p className="slovo__example">Пример: {word.example}</p>
+          <p className="slovo__example">
+            Пример: {localStorage.getItem("example")}
+          </p>
           <NavLink to="/" className="slovo__btn">
             <p>Вернуться на главную</p>
           </NavLink>

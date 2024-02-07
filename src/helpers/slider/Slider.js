@@ -15,6 +15,9 @@ const Slider = () => {
       modules={[Navigation, Autoplay]}
       spaceBetween={20}
       slidesPerView={1}
+      grabCursor={true}
+      a11y={false}
+      freeMode={true}
       breakpoints={{
         1210: {
           slidesPerView: 3,

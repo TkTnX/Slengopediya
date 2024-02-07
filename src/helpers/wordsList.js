@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-const words = [
+export const words = [
   {
     id: uuidv4(),
 
@@ -1544,7 +1544,6 @@ const words = [
   },
 ];
 words.sort((a, b) => a.title.localeCompare(b.title));
-export { words };
 
 // {
 //   id: uuidv4(),

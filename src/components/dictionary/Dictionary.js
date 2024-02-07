@@ -35,7 +35,11 @@ const Dictionary = () => {
             ) : (
               filteredWords.map((word, id) => {
                 return (
-                  <li className="dictionary__item">
+                  <li
+                    
+                    className="dictionary__item"
+                    key={word.id}
+                  >
                     <NavLink to={`/word/${word.id}`}>
                       <WordComponent
                         key={id}

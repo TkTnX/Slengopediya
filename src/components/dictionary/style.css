@@ -75,9 +75,12 @@
   background-color: #fff;
   transition: background-color 0.1s ease-in, color 0.1s ease-in;
 }
+
 .dictionary__item:hover {
-  background-color: var(--accent);
-  color: #fff;
+  @media (hover: hover) and (pointer: fine) {
+    background-color: var(--accent);
+    color: #fff;
+  }
 }
 .dictionary__item:active {
   background-color: #dfaf67;
@@ -90,3 +93,5 @@
   height: 100%;
   width: 100%;
 }
+
+
