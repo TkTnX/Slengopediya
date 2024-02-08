@@ -22,7 +22,7 @@ const Word = () => {
           <h2 className="slovo__title">{localStorage.getItem("title")}</h2>
 
           <p className="slovo__desc">
-            {localStorage.getItem("title")}-{localStorage.getItem("desc")}
+            {localStorage.getItem("title")} - {localStorage.getItem("desc")}
           </p>
           <p className="slovo__example">
             Пример: {localStorage.getItem("example")}
